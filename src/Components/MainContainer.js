@@ -11,7 +11,7 @@ const MainContainer = () => {
     return
   }
 
-  const {original_title,overview,id}=trailerVideo[12]
+  const {original_title,overview,id}=trailerVideo[10]
 
   return (
     <div>

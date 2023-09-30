@@ -9,7 +9,7 @@ const useGetMovieTrailer = ({movieID}) => {
    const dispatch=useDispatch()
 
 
-   const getMovieTrailer=async()=>{
+    const getMovieTrailer=async()=>{
 
     const data=await fetch(`https://api.themoviedb.org/3/movie/${movieID}/videos`, TMDB_OPTION )
 

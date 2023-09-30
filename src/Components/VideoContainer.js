@@ -13,7 +13,7 @@ const trailerVideo=useSelector((store)=>store.movies?.movieTrailer)
 
   
 return (
-    <div className='text-white w-full aspect-video'>
+    <div className='text-white w-full aspect-video '>
       <iframe 
           width="100%"
         height="100%"
