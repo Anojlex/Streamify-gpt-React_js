@@ -1,13 +1,14 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { addMovieTrailer } from '../movieSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { TMDB_OPTION } from '../constants'
 
 const useGetMovieTrailer = ({movieID}) => {
 
    const dispatch=useDispatch()
 
+    const trailerExist=useSelector(store=>store.movies.movieTrailer)
 
     const getMovieTrailer=async()=>{
 
@@ -26,7 +27,8 @@ const useGetMovieTrailer = ({movieID}) => {
 
 
 useEffect(()=>{
- getMovieTrailer()
+
+ !trailerExist && getMovieTrailer()
 },[])
 
 }

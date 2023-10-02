@@ -37,14 +37,17 @@ const Header = () => {
       return ()=>unsubscribe
      },[])
   return (
-     <div className="absolute bg-gradient-to-b from-black w-full z-20 flex justify-between">
+     <div className="absolute bg-gradient-to-b from-black w-full z-20 flex justify-between ">
     
-   
-     <img className=" w-36 m-6"
-       src={NETFLIXLOGO}
-     />
+      <div className='pl-10'>
+      <img className=" w-32 m-6 " src={NETFLIXLOGO}/>
+       
+
+      </div>
+    
+
     {user && <div className='flex'>
-     <img className='w-8 h-8 m-6 rounded-md' src={USER_AVATAR}></img>
+     <img className='w-8 h-8 my-6 rounded-md' src={USER_AVATAR}></img>
      <button onClick={handleSignout} className='bg-transparent text-white font-semibold px-3 w-18 h-8  m-4 rounded-md'>Sign Out</button>
      </div>}
     </div>

@@ -5,7 +5,7 @@ const MovieCard = ({imageID}) => {
    
   return (
     
-            <img className='w-40 m-4 rounded-md h-max' alt="Thumbnail" src={THUMBNAIL_URL+imageID}></img>
+            <img className='w-40 m-2 rounded-sm h-max' alt="Thumbnail" src={THUMBNAIL_URL+imageID}></img>
       
    
   )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { TMDB_OPTION } from '../constants'
 import { addNowPlayingMovies } from '../movieSlice'
 import { useEffect } from 'react'
@@ -7,6 +7,8 @@ import { useEffect } from 'react'
 const useGetMovieList = () => {
 
     const dispatch=useDispatch()
+
+    const nowPlayingMoviesExist =useSelector(store=>store.movies.nowPlayingMovies)
 
     const getMovieList=async()=>{
 
@@ -18,7 +20,7 @@ const useGetMovieList = () => {
     }
 
 useEffect(()=>{
-  getMovieList()
+ !nowPlayingMoviesExist&& getMovieList()
 },[] )
 
 }

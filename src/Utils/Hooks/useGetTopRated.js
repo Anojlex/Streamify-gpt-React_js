@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { TMDB_OPTION } from '../constants'
 import {  addTopRated } from '../movieSlice'
 import { useEffect } from 'react'
@@ -8,6 +8,8 @@ import { useEffect } from 'react'
 const useGetTopRated = () => {
 
     const dispatch=useDispatch()
+
+    const topRatedExist =useSelector(store=>store.movies.topRated)
 
     const getTopRated=async()=>{
 
@@ -21,7 +23,7 @@ const useGetTopRated = () => {
     }
 
 useEffect(()=>{
-    getTopRated()
+   !topRatedExist && getTopRated();
 },[] )
 
 }
