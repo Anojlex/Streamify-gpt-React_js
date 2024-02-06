@@ -5,18 +5,18 @@ import { useSelector } from 'react-redux'
 
 const MainContainer = () => {
 
-  const trailerVideo=useSelector((store)=>store.movies?.nowPlayingMovies)
+  const trailerVideo = useSelector((store) => store.movies?.nowPlayingMovies)
 
-  if(!trailerVideo){
+  if (!trailerVideo) {
     return
   }
 
-  const {original_title,overview,id}=trailerVideo[1]
+  const { original_title, overview, id } = trailerVideo[8]
 
   return (
-    <div>
-        <VideoTitle  title={original_title} overview={overview}/>
-        <VideoContainer movieID={id} />
+    <div className="pt-[30%] bg-black md:pt-0">
+      <VideoTitle title={original_title} overview={overview} />
+      <VideoContainer movieID={id} />
     </div>
   )
 }

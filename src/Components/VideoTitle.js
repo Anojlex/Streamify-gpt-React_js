@@ -1,21 +1,19 @@
 import React from 'react'
 
-const VideoTitle = ({title,overview}) => {
+const VideoTitle = ({ title, overview }) => {
 
   return (
-    <div className='text-white absolute bg-gradient-to-r from-black pt-72  w-screen aspect-video pl-16  '>
-        <div className='font-bold text-4xl m-4'>{title}</div>
-
-        <div className='w-96 m-4'>{overview}</div>
-
-        <div className='flex'>
-
-            <button className='bg-white bg-opacity-80 rounded-md h-10 w-28 mx-4 text-black font-semibold p-2 hover:bg-opacity-20'>Play</button>
- 
-           <button className='bg-white bg-opacity-40 rounded-md h-10 w-28 mx-1 text-black font-semibold p-2 hover:bg-opacity-20'>More</button>
-
-        </div>
-
+    <div className="w-screen aspect-video pt-[20%] px-6 md:px-24 absolute text-white bg-gradient-to-r from-black">
+      <h1 className="text-2xl md:text-4xl font-bold">{title}</h1>
+      <p className="hidden lg:inline-block py-6 text-md w-1/4">{overview}</p>
+      <div className="my-4 md:m-0">
+        <button className=" bg-white text-black py-1 md:py-2 px-2 md:px-12 text-xl  rounded-lg hover:bg-opacity-80">
+          Play
+        </button>
+        <button className="hidden lg:inline-block mx-2  bg-gray-500 text-white p-4 px-8 py-2 text-xl bg-opacity-50 rounded-lg">
+          More Info
+        </button>
+      </div>
     </div>
   )
 }
